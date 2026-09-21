@@ -1,0 +1,4 @@
+teacher,phase1_minutes_1xa100,scratch_minutes_4xa100,full_kd_minutes_4xa100,selective_min_minutes_4xa100,selective_max_minutes_4xa100,online_estimate_extra_minutes
+GPT-2,2.3,27.9,27.0,27.6,27.9,93
+Qwen2-0.5B,4.2,54.1,52.7,54.3,72.6,169
+Gemma-3-270m,5.1,104.0,104.0,97.5,99.0,203

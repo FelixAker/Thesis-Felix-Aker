@@ -1,0 +1,16 @@
+# Data, checkpoints and cached teacher logits are not versioned
+/data/
+/experiments/
+/models/
+/logs/
+*.tar.gz
+*.zip
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+.DS_Store
