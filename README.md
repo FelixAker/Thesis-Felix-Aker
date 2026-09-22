@@ -55,9 +55,12 @@ results/                              the numbers reported in the thesis
 | File | Thesis |
 |---|---|
 | `results/main_results_40epoch.csv` | Table 5.1, the 18-condition main study |
-| `results/embedding_inheritance.csv` | Section 5.7, the same 18 conditions with inherited embeddings |
-| `results/ablation_10epoch_gpt2.csv` | Table 5.8, GPT-2 at a quarter of the training budget |
+| `results/embedding_inheritance.csv` | Table D.1, the same 18 conditions with inherited embeddings (Section 5.6) |
+| `results/ablation_10epoch_gpt2.csv` | Table 5.8 and Table D.2, GPT-2 at a quarter of the training budget |
 | `results/runtimes.csv` | Table 5.9, measured run times |
+
+Every value in these files is the one printed in the thesis; they were checked against
+the tables programmatically.
 
 Zero-shot scores are the average accuracy reported by the official
 `evaluation-pipeline-2025` package; GLUE scores are the best validation score
@@ -111,7 +114,8 @@ size of 64 (4 GPUs × 16 per device × 1 accumulation step).
 
 The scripts in `cluster/` take the repository root from `$REPO_ROOT` (default:
 the current directory) and the container from `$CONTAINER`, so they can be
-pointed at another machine without editing them:
+pointed at another machine without editing them. The submit wrappers use
+associative arrays and therefore need bash 4 or newer (macOS ships bash 3.2):
 
 ```bash
 REPO_ROOT=$PWD sbatch cluster/slurm/phase1_precompute.slurm \
