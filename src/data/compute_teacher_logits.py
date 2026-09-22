@@ -45,11 +45,12 @@ def compute_entropy_and_topk(logits, k=5):
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Precompute Teacher Logits using GPT2-XL")
-    parser.add_argument("--teacher_model", type=str, default="openai-community/gpt2-xl",
+    parser = argparse.ArgumentParser(description="Precompute top-K teacher logits and per-token entropy")
+    parser.add_argument("--teacher_model", type=str, default="openai-community/gpt2",
                         help="HuggingFace teacher model. MUST share the same tokenizer vocabulary "
                              "as the student model so that top-K indices are compatible. "
-                             "Default: gpt2-xl (50,257 tokens, same as gpt2 student).")
+                             "Default: gpt2 (50,257 tokens), the smallest of the three teachers "
+                             "reported in the thesis.")
     parser.add_argument("--dataset_path", type=str, required=True, help="Path to input tokenized dataset")
     parser.add_argument("--output_path", type=str, required=True, help="Output path to save augmented dataset")
     parser.add_argument("--batch_size", type=int, default=8, help="Inference batch size")
