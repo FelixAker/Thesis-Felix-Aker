@@ -54,10 +54,10 @@ results/                              the numbers reported in the thesis
 
 | File | Thesis |
 |---|---|
-| `results/main_results_40epoch.csv` | Table 5.1, the 18-condition main study |
+| `results/main_results_40epoch.csv` | Tables 5.1 and 5.8, the 18-condition main study (zero-shot and GLUE) |
 | `results/embedding_inheritance.csv` | Table D.1, the same 18 conditions with inherited embeddings (Section 5.6) |
-| `results/ablation_10epoch_gpt2.csv` | Table 5.8 and Table D.2, GPT-2 at a quarter of the training budget |
-| `results/runtimes.csv` | Table 5.9, measured run times |
+| `results/ablation_10epoch_gpt2.csv` | Tables 5.9 and D.2, GPT-2 at a quarter of the training budget |
+| `results/runtimes.csv` | Table 5.10, measured run times |
 
 Every value in these files is the one printed in the thesis; they were checked against
 the tables programmatically.
